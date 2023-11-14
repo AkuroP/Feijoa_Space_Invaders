@@ -8,6 +8,10 @@ using UnityEngine;
 public class Invaders_Manager : MonoBehaviour
 {
     [SerializeField] private bool _isGamePlaying = true;
+    [SerializeField] private List<Invaders> _invader;
+
+    [Space]
+    [Header("Movement")]
     [SerializeField] private float _maxTimerMoveInvader = 1f;
     private float _timerMoveInvader;
     
@@ -17,11 +21,9 @@ public class Invaders_Manager : MonoBehaviour
     [SerializeField] private float _maxTimerMoveInvader_3 = 1.2f;
     private float _timerMoveInvader_3;*/
 
-    [SerializeField] private List<Invaders> _invader;
     /*[SerializeField] private List<Transform> _invader_2;
     [SerializeField] private List<Transform> _invader_3;*/
 
-    [Space]
     [SerializeField]
     private Vector2 _leftVector = new Vector2(-0.25f, 0f);
     
@@ -34,6 +36,18 @@ public class Invaders_Manager : MonoBehaviour
     private Vector2 _downRightVector = new Vector2(.25f, -.25f);
     
     private Vector2 _moveVector;
+
+    [Space]
+    [Header("Ovni")]
+    [SerializeField]
+    private GameObject _ovni;
+    [SerializeField]
+    private Transform _ovniSpawnPointA;
+    [SerializeField]
+    private Transform _ovniSpawnPointB;
+    [SerializeField, Range(5f, 15f)]
+    private float _maxOvniSpawnTimer = 5f;
+    private float _ovniSpawnTimer;
    
     
     //Get Set
@@ -58,6 +72,7 @@ public class Invaders_Manager : MonoBehaviour
         _timerMoveInvader_3 = _maxTimerMoveInvader_3;*/
         _moveVector = _rightVector;
         _isGamePlaying = true;
+        _ovniSpawnTimer = _maxOvniSpawnTimer;
     }
 
     // Update is called once per frame
@@ -74,6 +89,24 @@ public class Invaders_Manager : MonoBehaviour
             }
         }
         else _timerMoveInvader -= Time.deltaTime;
+
+        if (_ovniSpawnTimer > 0) _ovniSpawnTimer -= Time.deltaTime;
+        else
+        {
+            int spawnPos = Random.Range(0, 2);
+            switch(spawnPos)
+            {
+                case 0:
+                    GameObject ovniA = Instantiate(_ovni, _ovniSpawnPointA.transform.position, Quaternion.identity);
+                    ovniA.GetComponent<Ovni>().TargetPos = new Vector2(_ovniSpawnPointB.position.x * 1.5f, _ovniSpawnPointB.position.y);
+                break; 
+                case 1:
+                    GameObject ovniB = Instantiate(_ovni, _ovniSpawnPointB.transform.position, Quaternion.identity);
+                    ovniB.GetComponent<Ovni>().TargetPos = new Vector2(_ovniSpawnPointA.position.x * 1.5f, _ovniSpawnPointA.position.y);
+                    break;
+            }
+            _ovniSpawnTimer = _maxOvniSpawnTimer;
+        }
 
        /* //Move Invader 2
         if (_timerMoveInvader_2 <= 0)
