@@ -9,9 +9,8 @@ public class Invaders_Manager : MonoBehaviour
 {
     [SerializeField] private bool _isGamePlaying = true;
     [SerializeField] private List<Invaders> _invader;
-
     [Space]
-    [Header("Movement")]
+    [Header("Invader Movement")]
     [SerializeField] private float _maxTimerMoveInvader = 1f;
     private float _timerMoveInvader;
     
@@ -36,6 +35,13 @@ public class Invaders_Manager : MonoBehaviour
     private Vector2 _downRightVector = new Vector2(.25f, -.25f);
     
     private Vector2 _moveVector;
+
+    [Space]
+    [Header("Invader Shoot")]
+    [SerializeField] private float _maxTimerInvaderShoot;
+    private float _timerInvaderShoot = 1f;
+    [SerializeField]
+    private GameObject _invaderBullet;
 
     [Space]
     [Header("Ovni")]
@@ -73,13 +79,14 @@ public class Invaders_Manager : MonoBehaviour
         _moveVector = _rightVector;
         _isGamePlaying = true;
         _ovniSpawnTimer = _maxOvniSpawnTimer;
+        _timerInvaderShoot = _maxTimerInvaderShoot;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         if (!_isGamePlaying) return;
-        //Move Invader 1
+        //Move Invader
         if(_timerMoveInvader <= 0 ) 
         { 
             foreach(Invaders invaderTransform in _invader)
@@ -90,6 +97,7 @@ public class Invaders_Manager : MonoBehaviour
         }
         else _timerMoveInvader -= Time.deltaTime;
 
+        //Move Ovni
         if (_ovniSpawnTimer > 0) _ovniSpawnTimer -= Time.deltaTime;
         else
         {
@@ -106,6 +114,15 @@ public class Invaders_Manager : MonoBehaviour
                     break;
             }
             _ovniSpawnTimer = _maxOvniSpawnTimer;
+        }
+
+        //Shoot Invader
+        if(_timerInvaderShoot > 0)_timerInvaderShoot -= Time.deltaTime;
+        else
+        {
+            int invaderIndex = Random.Range(0, _invader.Count);
+            Instantiate(_invaderBullet, _invader[invaderIndex].transform.position, Quaternion.identity);
+            _timerInvaderShoot = _maxTimerInvaderShoot;
         }
 
        /* //Move Invader 2
