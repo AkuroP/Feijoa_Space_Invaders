@@ -5,10 +5,10 @@ using UnityEngine;
 
 public class Zone : MonoBehaviour
 {
-    [SerializeField] private Player _player;
+    [SerializeField] private PlayerController _player;
     [SerializeField] private Invaders_Manager _invadersManager;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (!other.CompareTag("Invaders")) return;
         _player.gameObject.SetActive(false);

@@ -9,10 +9,10 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        this.transform.position += transform.forward * Time.deltaTime * _speed;
+        this.transform.position += transform.up * Time.deltaTime * _speed;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Wall"))Destroy(this.gameObject);
 

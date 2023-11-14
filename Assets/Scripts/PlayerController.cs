@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float limits;
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
+    [Space]
+    [SerializeField] private float _maxShootCD = 1f;
+    private float _shootCD;
 
     private void Awake()
     {
@@ -35,13 +38,17 @@ public class PlayerController : MonoBehaviour
         {
             transform.position = new Vector3(limits, transform.position.y, transform.position.z);
         }
+
+        if(_shootCD > 0) _shootCD -= Time.deltaTime;
     }
 
     public void Shoot(InputAction.CallbackContext context)
     {
         if (context.performed)
         {
+            if (_shootCD > 0f) return;
             Instantiate(bulletPrefab, transform.position, transform.rotation);
+            _shootCD = _maxShootCD;
         }
     }
 
