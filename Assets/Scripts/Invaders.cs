@@ -26,7 +26,7 @@ public class Invaders : MonoBehaviour
         
     }
 
-    private void OnDestroy()
+    private void OnDisable()
     {
         switch(_invaderType)
         {

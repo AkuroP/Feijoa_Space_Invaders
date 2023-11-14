@@ -2,10 +2,12 @@ using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 
 public class Invaders_Manager : MonoBehaviour
 {
+    [SerializeField] private bool _isGamePlaying = true;
     [SerializeField] private float _maxTimerMoveInvader_1 = 1f;
     private float _timerMoveInvader_1;
     
@@ -34,6 +36,8 @@ public class Invaders_Manager : MonoBehaviour
    
     
     //Get Set
+
+    public bool IsGamePlaying { get => _isGamePlaying; set => _isGamePlaying = value; }
     public float MaxTimerMoveInvader_1 { get => _maxTimerMoveInvader_1; set => _maxTimerMoveInvader_1 = value; }
     public float MaxTimerMoveInvader_2 { get => _maxTimerMoveInvader_2; set => _maxTimerMoveInvader_2 = value; }
     public float MaxTimerMoveInvader_3 { get => _maxTimerMoveInvader_3; set => _maxTimerMoveInvader_3 = value; }
@@ -52,12 +56,13 @@ public class Invaders_Manager : MonoBehaviour
         _timerMoveInvader_2 = _maxTimerMoveInvader_2;
         _timerMoveInvader_3 = _maxTimerMoveInvader_3;
         _moveVector = _rightVector;
+        _isGamePlaying = true;
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-
+        if (!_isGamePlaying) return;
         //Move Invader 1
         if(_timerMoveInvader_1 <= 0 ) 
         { 
