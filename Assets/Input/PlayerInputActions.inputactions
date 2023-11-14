@@ -29,7 +29,7 @@
                     "name": "2D Vector",
                     "id": "0e1aac89-76a4-45d3-9532-dc47f317ac0d",
                     "path": "2DVector",
-                    "interactions": "",
+                    "interactions": "Hold",
                     "processors": "",
                     "groups": "",
                     "action": "PlayerMovement",
