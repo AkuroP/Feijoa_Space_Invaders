@@ -14,6 +14,8 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if(other.CompareTag("Wall"))Destroy(this.gameObject);
+
         if (!other.CompareTag("Invaders")) return;
         other.gameObject.SetActive(false);
         Destroy(this.gameObject);

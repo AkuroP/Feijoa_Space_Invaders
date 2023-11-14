@@ -27,6 +27,7 @@ public class Wall : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
+
         if (!other.CompareTag("Invaders")) return;
         hasSwitchSide = false;
     }
