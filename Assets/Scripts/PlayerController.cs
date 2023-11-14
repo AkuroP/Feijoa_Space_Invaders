@@ -15,6 +15,21 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _maxShootCD = 1f;
     private float _shootCD;
 
+    [SerializeField]
+    private Invaders_Manager _invadersManager;
+    [Space]
+    [Header("Player Health")]
+    [SerializeField]
+    private int _playerHP = 3;
+    private float _maxRespawnCD = 3f;
+    private float _respawnCD;
+    private bool _respawning;
+
+
+    //Get Set
+    public bool Respawning { get => _respawning; set => _respawning = value; }
+    public float RespawnCD { get => _respawnCD; set => _respawnCD = value; }
+    public float MaxRespawnCD { get => _maxRespawnCD;}
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -40,6 +55,8 @@ public class PlayerController : MonoBehaviour
         }
 
         if(_shootCD > 0) _shootCD -= Time.deltaTime;
+
+        
     }
 
     public void Shoot(InputAction.CallbackContext context)
@@ -60,5 +77,17 @@ public class PlayerController : MonoBehaviour
         //     transform.position += new Vector3(inputVector.x * playerSpeed, 0, inputVector.y * playerSpeed);
         // }
     }
-    
+
+    public void TakeDamage()
+    {
+        _playerHP--;
+        if (_playerHP <= 0) return;
+        _respawning = true;
+        _respawnCD = _maxRespawnCD;
+
+    }
+
+    private void OnEnable() => _invadersManager.IsGamePlaying = true;
+
+    private void OnDisable() => _invadersManager.IsGamePlaying = false;
 }

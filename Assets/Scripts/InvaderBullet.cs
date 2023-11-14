@@ -17,6 +17,7 @@ public class InvaderBullet : MonoBehaviour
         if (other.CompareTag("Wall")) Destroy(this.gameObject);
 
         if (!other.CompareTag("Player")) return;
+        other.GetComponent<PlayerController>().TakeDamage();
         other.gameObject.SetActive(false);
         Destroy(this.gameObject);
     }
