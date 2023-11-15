@@ -6,20 +6,21 @@ public class Invaders : MonoBehaviour
 {
     [SerializeField] private Invaders_Manager _invaderManager;
 
-    public enum INVADER_TYPE
+    public enum INVADER_WAVE
     {
-        FIRST_TYPE,
-        SECOND_TYPE,
-        THIRD_TYPE
+        FIRST_WAVE,
+        SECOND_WAVE,
+        THIRD_WAVE
     }
 
-    public INVADER_TYPE _invaderType;
+    public INVADER_WAVE _invaderType;
 
     [Header("Invader Movement")]
     [SerializeField] private float _maxTimerMoveInvader = 1f;
     private float _timerMoveInvader;
 
     private Vector2 _moveVector;
+    private int _moveMuliplier = 1;
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
 
@@ -50,7 +51,7 @@ public class Invaders : MonoBehaviour
         if (!_invaderManager.IsGamePlaying) return;
         if (_timerMoveInvader <= 0)
         {
-            this.transform.position += (Vector3)_moveVector;
+            this.transform.position += (Vector3)_moveVector * _moveMuliplier;
             _timerMoveInvader = _maxTimerMoveInvader;
         }
         else _timerMoveInvader -= Time.deltaTime;
@@ -58,19 +59,20 @@ public class Invaders : MonoBehaviour
 
     private void OnDisable()
     {
-        _invaderManager.Invader.Remove(this);
-        foreach (Invaders invader in _invaderManager.Invader)invader.MaxTimerMoveInvader -= .017f;
-       /* _invaderManager.MaxTimerMoveInvader_2 -= .017f;
-        _invaderManager.MaxTimerMoveInvader_3 -= .017f;*/
-
-        if(_invaderManager.Invader.Count <= 1)
+        _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader.Remove(this);
+        foreach (Invaders invader in _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader)invader.MaxTimerMoveInvader -= .017f;
+        /* _invaderManager.MaxTimerMoveInvader_2 -= .017f;
+         _invaderManager.MaxTimerMoveInvader_3 -= .017f;*/
+        switch(_invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader.Count)
         {
-            _invaderManager.Invader[0].MaxTimerMoveInvader = 0f;
-            /*_invaderManager.MaxTimerMoveInvader_2 = 0f;
-            _invaderManager.MaxTimerMoveInvader_3 = 0f;*/
-            _invaderManager.LeftVector *= 2;
-            _invaderManager.RightVector *= 2;
-            _invaderManager.Invader[0]._moveVector *= 2;
+            case 1:
+                _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader[0].MaxTimerMoveInvader = 0f;
+                _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader[0]._moveMuliplier = 2;
+            break;
+            case 0:
+                if (_invaderManager.CurrentWave >= _invaderManager.InvadersWaves.Count) break;
+                _invaderManager.CurrentWave++;
+            break;
         }
     }
 

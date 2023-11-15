@@ -1,14 +1,15 @@
 using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
+using System.ComponentModel;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Invaders_Manager : MonoBehaviour
 {
     [SerializeField] private bool _isGamePlaying = true;
-    [SerializeField] private List<Invaders> _invader;
     
     /*[SerializeField] private float _maxTimerMoveInvader_2 = 1.1f;
     private float _timerMoveInvader_2;
@@ -49,15 +50,35 @@ public class Invaders_Manager : MonoBehaviour
     [SerializeField, Range(5f, 15f)]
     private float _maxOvniSpawnTimer = 5f;
     private float _ovniSpawnTimer;
-   
+
+
+
+    /*public float MaxTimerMoveInvader_2 { get => _maxTimerMoveInvader_2; set => _maxTimerMoveInvader_2 = value; }
+    public float MaxTimerMoveInvader_3 { get => _maxTimerMoveInvader_3; set => _maxTimerMoveInvader_3 = value; }*/
+    //public List<Invaders> Invader {  get => _invader; }
+    [System.Serializable]
+    public class InvadersWave
+    {
+        public List<Invaders> _invader;
+        public float _timerBeforeWaveStart;
+        public bool _hasWaveStarted;
+        public GameObject _wave;
+    }
+    [Space]
+    [Header("Wave")]
+    [SerializeField]
+    private List<InvadersWave> _invadersWave;
+    [SerializeField]
+    private int _currentWave;
+
+    
     
     //Get Set
 
     public bool IsGamePlaying { get => _isGamePlaying; set => _isGamePlaying = value; }
+    public List<InvadersWave> InvadersWaves { get => _invadersWave; set => _invadersWave = value; }
 
-    /*public float MaxTimerMoveInvader_2 { get => _maxTimerMoveInvader_2; set => _maxTimerMoveInvader_2 = value; }
-    public float MaxTimerMoveInvader_3 { get => _maxTimerMoveInvader_3; set => _maxTimerMoveInvader_3 = value; }*/
-    public List<Invaders> Invader {  get => _invader; }
+    public int CurrentWave { get => _currentWave ; set => _currentWave = value; }
     /*public List<Transform> Invader_2 {  get => _invader_2; set => _invader_2 = value; }
     public List<Transform> Invader_3 {  get => _invader_3; set => _invader_3 = value; }*/
     public Vector2 LeftVector { get => _leftVector; set => _leftVector = value; }
@@ -72,9 +93,6 @@ public class Invaders_Manager : MonoBehaviour
     void Start()
     {
         
-        /*_timerMoveInvader_2 = _maxTimerMoveInvader_2;
-        _timerMoveInvader_3 = _maxTimerMoveInvader_3;*/
-        
         _isGamePlaying = true;
         _ovniSpawnTimer = _maxOvniSpawnTimer;
         _timerInvaderShoot = _maxTimerInvaderShoot;
@@ -84,8 +102,21 @@ public class Invaders_Manager : MonoBehaviour
     void FixedUpdate()
     {
         if (!_isGamePlaying) return;
-        //Move Invader
-        
+        //Start wave
+        if (!_invadersWave[_currentWave]._hasWaveStarted)
+        {
+            if (_invadersWave[_currentWave]._timerBeforeWaveStart > 0)
+            {
+                _invadersWave[_currentWave]._timerBeforeWaveStart -= Time.deltaTime;
+                return;
+            }
+            else
+            {
+                _invadersWave[_currentWave]._wave.SetActive(true);
+                _invadersWave[_currentWave]._hasWaveStarted = true;
+            }
+
+        }
 
         //Move Ovni
         if (_ovniSpawnTimer > 0) _ovniSpawnTimer -= Time.deltaTime;
@@ -110,32 +141,10 @@ public class Invaders_Manager : MonoBehaviour
         if(_timerInvaderShoot > 0)_timerInvaderShoot -= Time.deltaTime;
         else
         {
-            int invaderIndex = Random.Range(0, _invader.Count);
-            Instantiate(_invaderBullet, _invader[invaderIndex].transform.position, Quaternion.identity);
+            int invaderIndex = Random.Range(0, _invadersWave[_currentWave]._invader.Count);
+            Instantiate(_invaderBullet, _invadersWave[_currentWave]._invader[invaderIndex].transform.position, Quaternion.identity);
             _timerInvaderShoot = _maxTimerInvaderShoot;
         }
-
-       /* //Move Invader 2
-        if (_timerMoveInvader_2 <= 0)
-        {
-            foreach (Transform invaderTransform in _invader_2)
-            {
-                invaderTransform.position += _moveVector;
-                _timerMoveInvader_2 = _maxTimerMoveInvader_2;
-            }
-        }
-        else _timerMoveInvader_2 -= Time.deltaTime;
-
-        //Move Invader 3
-        if (_timerMoveInvader_3 <= 0)
-        {
-            foreach (Transform invaderTransform in _invader_3)
-            {
-                invaderTransform.position += _moveVector;
-                _timerMoveInvader_3 = _maxTimerMoveInvader_3;
-            }
-        }
-        else _timerMoveInvader_3 -= Time.deltaTime;*/
 
 
     }
