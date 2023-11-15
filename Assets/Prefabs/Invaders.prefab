@@ -101,6 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _invaderManager: {fileID: 0}
   _invaderType: 0
+  _maxTimerMoveInvader: 1
+  _fogSpawn: {fileID: 5971199394486862664, guid: ac8c85014fc62774798ef4c89d6fe77f, type: 3}
+  _maxTimeBeforeSpawn: 2
 --- !u!61 &5933045401364982414
 BoxCollider2D:
   m_ObjectHideFlags: 0

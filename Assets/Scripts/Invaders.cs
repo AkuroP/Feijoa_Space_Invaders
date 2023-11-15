@@ -20,15 +20,28 @@ public class Invaders : MonoBehaviour
     private float _timerMoveInvader;
 
     private Vector2 _moveVector;
+    private SpriteRenderer _spriteRenderer;
+    private BoxCollider2D _boxCollider2D;
+
+    [SerializeField] private GameObject _fogSpawn;
+    [SerializeField] private float _maxTimeBeforeSpawn;
 
 
     public float MaxTimerMoveInvader { get => _maxTimerMoveInvader; set => _maxTimerMoveInvader = value; }
 
+
     // Start is called before the first frame update
     void Start()
     {
-        _timerMoveInvader = _maxTimerMoveInvader;
+        _timerMoveInvader = _maxTimerMoveInvader + .7f;
         _moveVector = _invaderManager.RightVector;
+
+        _spriteRenderer = this.GetComponent<SpriteRenderer>();
+        _boxCollider2D = this.GetComponent<BoxCollider2D>();
+        _spriteRenderer.enabled = false;
+        _boxCollider2D.enabled = false;
+        
+        StartCoroutine(SpawnFogBeforeInvader());
     }
 
     // Update is called once per frame
@@ -80,6 +93,21 @@ public class Invaders : MonoBehaviour
         public void InvadersMoveDownLeft() => transform.position += (Vector3)_invaderManager.DownLeftVector;
 
         public void InvadersMoveDownRight() => transform.position += (Vector3)_invaderManager.DownRightVector;
+
+    private IEnumerator SpawnFogBeforeInvader()
+    {
+        //wait for invader to properly spawn
+        float randomTime = Random.Range(0f, _maxTimeBeforeSpawn);
+        _timerMoveInvader += randomTime;
+        yield return new WaitForSeconds(randomTime);
+        GameObject fog = Instantiate(_fogSpawn, this.transform.position, Quaternion.identity);
+        //wait for fog to appear a bit
+        yield return new WaitForSeconds(.7f);
+        _spriteRenderer.enabled = true;
+        _boxCollider2D.enabled = true;
+        
+        Destroy(fog);
+    }
 
 }
 

@@ -7011,7 +7011,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1959160219}
   m_Layer: 0
-  m_Name: Invaders_1
+  m_Name: Wave_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
