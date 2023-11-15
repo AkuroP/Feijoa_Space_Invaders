@@ -231,7 +231,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &70759356
 Transform:
   m_ObjectHideFlags: 0
@@ -766,23 +766,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.75
+      value: 2.6
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 8.37
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -815,6 +815,10 @@ PrefabInstance:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: _invaderManager
@@ -1747,23 +1751,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.75
+      value: 1.25
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 3.9
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1801,6 +1805,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (2)
@@ -2022,23 +2030,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.25
+      value: -1.9
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 6.35
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2076,6 +2084,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (3)
@@ -2701,23 +2713,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.25
+      value: 2.08
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 3.38
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2755,6 +2767,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (5)
@@ -2883,23 +2899,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 7.24
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2937,6 +2953,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (6)
@@ -3279,15 +3299,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.2
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3561,23 +3581,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.75
+      value: -1.73
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 8.84
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3615,6 +3635,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (9)
@@ -3756,7 +3780,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1004011367
 Transform:
   m_ObjectHideFlags: 0
@@ -3903,11 +3927,11 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 4947244907532714467, guid: 46aeddf9bfcf75d4e80f81df297557bb, type: 3}
       propertyPath: m_Size.y
-      value: 6.8543167
+      value: 11.169258
       objectReference: {fileID: 0}
     - target: {fileID: 4947244907532714467, guid: 46aeddf9bfcf75d4e80f81df297557bb, type: 3}
       propertyPath: m_Offset.y
-      value: -2.5027008
+      value: -0.34522986
       objectReference: {fileID: 0}
     - target: {fileID: 7505563529205882213, guid: 46aeddf9bfcf75d4e80f81df297557bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3972,23 +3996,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.75
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 6.86
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -4026,6 +4050,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (7)
@@ -4167,7 +4195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1123810946
 Transform:
   m_ObjectHideFlags: 0
@@ -4943,11 +4971,11 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 4947244907532714467, guid: 46aeddf9bfcf75d4e80f81df297557bb, type: 3}
       propertyPath: m_Size.y
-      value: 6.792637
+      value: 11.439833
       objectReference: {fileID: 0}
     - target: {fileID: 4947244907532714467, guid: 46aeddf9bfcf75d4e80f81df297557bb, type: 3}
       propertyPath: m_Offset.y
-      value: -2.5335407
+      value: -0.20994306
       objectReference: {fileID: 0}
     - target: {fileID: 7505563529205882213, guid: 46aeddf9bfcf75d4e80f81df297557bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5105,23 +5133,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 7.79
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5159,6 +5187,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.2
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (10)
@@ -5784,23 +5816,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.25
+      value: 1.27
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 9.54
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6075,23 +6107,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.75
+      value: -0.57
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6164,23 +6196,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 5.31
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6218,6 +6250,10 @@ PrefabInstance:
       propertyPath: _invaderManager
       value: 
       objectReference: {fileID: 1931596472}
+    - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
+      propertyPath: _maxTimerMoveInvader
+      value: 1.1
+      objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (1)
@@ -6253,23 +6289,23 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.75
+      value: -0.98
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.25
+      value: 4.72
       objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6617,7 +6653,6 @@ MonoBehaviour:
   - {fileID: 856915675}
   - {fileID: 1970103926}
   - {fileID: 1800947635}
-  _maxTimerMoveInvader: 1
   _leftVector: {x: -0.125, y: 0}
   _rightVector: {x: 0.125, y: 0}
   _downLeftVector: {x: -0.25, y: -0.125}
@@ -7119,7 +7154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2125005889
 Transform:
   m_ObjectHideFlags: 0

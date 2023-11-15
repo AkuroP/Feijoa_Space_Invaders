@@ -14,47 +14,72 @@ public class Invaders : MonoBehaviour
     }
 
     public INVADER_TYPE _invaderType;
+
+    [Header("Invader Movement")]
+    [SerializeField] private float _maxTimerMoveInvader = 1f;
+    private float _timerMoveInvader;
+
+    private Vector2 _moveVector;
+
+
+    public float MaxTimerMoveInvader { get => _maxTimerMoveInvader; set => _maxTimerMoveInvader = value; }
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        _timerMoveInvader = _maxTimerMoveInvader;
+        _moveVector = _invaderManager.RightVector;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        
+        if (!_invaderManager.IsGamePlaying) return;
+        if (_timerMoveInvader <= 0)
+        {
+            this.transform.position += (Vector3)_moveVector;
+            _timerMoveInvader = _maxTimerMoveInvader;
+        }
+        else _timerMoveInvader -= Time.deltaTime;
     }
 
     private void OnDisable()
     {
-        /*switch(_invaderType)
-        {
-            case INVADER_TYPE.FIRST_TYPE:
-                _invaderManager.Invader.Remove(this.transform);
-            break;
-            case INVADER_TYPE.SECOND_TYPE:
-                _invaderManager.Invader_2.Remove(this.transform);
-            break;
-            case INVADER_TYPE.THIRD_TYPE:
-                _invaderManager.Invader_3.Remove(this.transform);
-            break;
-        }*/
-
         _invaderManager.Invader.Remove(this);
-
-        _invaderManager.MaxTimerMoveInvader -= .017f;
+        foreach (Invaders invader in _invaderManager.Invader)invader.MaxTimerMoveInvader -= .017f;
        /* _invaderManager.MaxTimerMoveInvader_2 -= .017f;
         _invaderManager.MaxTimerMoveInvader_3 -= .017f;*/
 
-        if(_invaderManager.Invader.Count /*+ _invaderManager.Invader_2.Count + _invaderManager.Invader_3.Count*/ <= 1)
+        if(_invaderManager.Invader.Count <= 1)
         {
-            _invaderManager.MaxTimerMoveInvader = 0f;
+            _invaderManager.Invader[0].MaxTimerMoveInvader = 0f;
             /*_invaderManager.MaxTimerMoveInvader_2 = 0f;
             _invaderManager.MaxTimerMoveInvader_3 = 0f;*/
             _invaderManager.LeftVector *= 2;
             _invaderManager.RightVector *= 2;
-            _invaderManager.MoveVector *= 2;
+            _invaderManager.Invader[0]._moveVector *= 2;
         }
     }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (!other.CompareTag("Wall")) return;
+        Wall wall = other.GetComponent<Wall>();
+        if (wall.IsRightWall)
+        {
+            this.InvadersMoveDownLeft();
+            _moveVector = _invaderManager.LeftVector;
+        }
+        else
+        {
+            this.InvadersMoveDownRight();
+            _moveVector = _invaderManager.RightVector;
+        }
+
+    }
+        public void InvadersMoveDownLeft() => transform.position += (Vector3)_invaderManager.DownLeftVector;
+
+        public void InvadersMoveDownRight() => transform.position += (Vector3)_invaderManager.DownRightVector;
+
 }
+

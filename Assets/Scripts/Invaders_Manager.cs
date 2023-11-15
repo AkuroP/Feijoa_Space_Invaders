@@ -9,10 +9,6 @@ public class Invaders_Manager : MonoBehaviour
 {
     [SerializeField] private bool _isGamePlaying = true;
     [SerializeField] private List<Invaders> _invader;
-    [Space]
-    [Header("Invader Movement")]
-    [SerializeField] private float _maxTimerMoveInvader = 1f;
-    private float _timerMoveInvader;
     
     /*[SerializeField] private float _maxTimerMoveInvader_2 = 1.1f;
     private float _timerMoveInvader_2;
@@ -34,7 +30,6 @@ public class Invaders_Manager : MonoBehaviour
     [SerializeField]
     private Vector2 _downRightVector = new Vector2(.25f, -.25f);
     
-    private Vector2 _moveVector;
 
     [Space]
     [Header("Invader Shoot")]
@@ -59,24 +54,27 @@ public class Invaders_Manager : MonoBehaviour
     //Get Set
 
     public bool IsGamePlaying { get => _isGamePlaying; set => _isGamePlaying = value; }
-    public float MaxTimerMoveInvader { get => _maxTimerMoveInvader; set => _maxTimerMoveInvader = value; }
+
     /*public float MaxTimerMoveInvader_2 { get => _maxTimerMoveInvader_2; set => _maxTimerMoveInvader_2 = value; }
     public float MaxTimerMoveInvader_3 { get => _maxTimerMoveInvader_3; set => _maxTimerMoveInvader_3 = value; }*/
-    public List<Invaders> Invader {  get => _invader; set => _invader = value; }
+    public List<Invaders> Invader {  get => _invader; }
     /*public List<Transform> Invader_2 {  get => _invader_2; set => _invader_2 = value; }
     public List<Transform> Invader_3 {  get => _invader_3; set => _invader_3 = value; }*/
     public Vector2 LeftVector { get => _leftVector; set => _leftVector = value; }
     public Vector2 RightVector { get => _rightVector; set => _rightVector = value; }
+    public Vector2 DownRightVector { get => _downRightVector; set => _downRightVector = value; }
+    public Vector2 DownLeftVector { get => _downLeftVector; set => _downLeftVector = value; }
     
-    public Vector2 MoveVector { get => _moveVector; set => _moveVector = value; }
+    //public Vector2 MoveVector { get => _moveVector; set => _moveVector = value; }
+
 
     // Start is called before the first frame update
     void Start()
     {
-        _timerMoveInvader = _maxTimerMoveInvader;
+        
         /*_timerMoveInvader_2 = _maxTimerMoveInvader_2;
         _timerMoveInvader_3 = _maxTimerMoveInvader_3;*/
-        _moveVector = _rightVector;
+        
         _isGamePlaying = true;
         _ovniSpawnTimer = _maxOvniSpawnTimer;
         _timerInvaderShoot = _maxTimerInvaderShoot;
@@ -87,15 +85,7 @@ public class Invaders_Manager : MonoBehaviour
     {
         if (!_isGamePlaying) return;
         //Move Invader
-        if(_timerMoveInvader <= 0 ) 
-        { 
-            foreach(Invaders invaderTransform in _invader)
-            {
-                invaderTransform.transform.position += (Vector3)_moveVector;
-                _timerMoveInvader = _maxTimerMoveInvader;
-            }
-        }
-        else _timerMoveInvader -= Time.deltaTime;
+        
 
         //Move Ovni
         if (_ovniSpawnTimer > 0) _ovniSpawnTimer -= Time.deltaTime;
@@ -150,18 +140,5 @@ public class Invaders_Manager : MonoBehaviour
 
     }
 
-    public void InvadersMoveDownLeft()
-    {
-        foreach (Invaders inv in _invader)inv.transform.position += (Vector3)_downLeftVector;
-        
-        /*foreach (Transform invaderTransform in _invader_2)invaderTransform.position += _downVector;
-        
-        foreach (Transform invaderTransform in _invader_3)invaderTransform.position += _downVector;*/
-        
-    }
-    public void InvadersMoveDownRight()
-    {
-        foreach (Invaders inv in _invader) inv.transform.position += (Vector3)_downRightVector;
-        
-    }
+   
 }
