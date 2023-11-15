@@ -173,6 +173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 10
+  _bulletVolume: {fileID: 0}
 --- !u!96 &8137749299388374986
 TrailRenderer:
   serializedVersion: 3
