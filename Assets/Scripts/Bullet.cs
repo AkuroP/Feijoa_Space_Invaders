@@ -17,6 +17,11 @@ public class Bullet : MonoBehaviour
         if(other.CompareTag("Wall"))Destroy(this.gameObject);
 
         if (!other.CompareTag("Invaders")) return;
+        DestroyObjectAndBullet(other);
+    }
+
+    private void DestroyObjectAndBullet(Collider2D other)
+    {
         other.gameObject.SetActive(false);
         Destroy(this.gameObject);
     }
