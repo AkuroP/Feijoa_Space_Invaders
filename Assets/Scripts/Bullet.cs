@@ -14,7 +14,12 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Wall"))Destroy(this.gameObject);
+        if (other.CompareTag("Wall"))
+        {
+            if (!other.GetComponent<Wall>().DeleteBullet) return;
+            Destroy(this.gameObject);
+        }
+
 
         if (!other.CompareTag("Invaders")) return;
         DestroyObjectAndBullet(other);

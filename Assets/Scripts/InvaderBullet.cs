@@ -5,16 +5,36 @@ using UnityEngine;
 public class InvaderBullet : MonoBehaviour
 {
     [SerializeField] private float _speed = 10f;
+    private SpriteRenderer _spriteRenderer;
+    private TrailRenderer _trailRenderer;
+
+    private void Start()
+    {
+        _spriteRenderer = this.GetComponent<SpriteRenderer>();
+        _trailRenderer = this.GetComponent<TrailRenderer>();
+    }
 
     // Update is called once per frame
     void FixedUpdate()
     {
         this.transform.position += Vector3.down * Time.deltaTime * _speed;
+
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Wall")) Destroy(this.gameObject);
+        if (other.CompareTag("Wall"))
+        {
+            Wall wall = other.GetComponent<Wall>();
+            if(wall.DeleteBullet) Destroy(this.gameObject);
+            if (wall.ChangeBulletColor)
+            {
+                _spriteRenderer.color = wall.NewColor;
+                _trailRenderer.startColor = wall.NewColor;
+            }
+
+        }
+
 
         if (other.name == "BulletWall")
         {

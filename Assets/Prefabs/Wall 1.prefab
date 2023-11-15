@@ -92,3 +92,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _invadersManager: {fileID: 0}
   _isRightWall: 1
+  _deleteBullet: 1
+  _changeBulletColor: 0
+  _newColor: {r: 0, g: 0, b: 0, a: 0}
