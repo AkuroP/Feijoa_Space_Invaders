@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Invaders
   - Wall
+  - PlayerBullet
   layers:
   - Default
   - TransparentFX

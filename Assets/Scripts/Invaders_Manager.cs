@@ -118,25 +118,6 @@ public class Invaders_Manager : MonoBehaviour
 
         }
 
-        //Move Ovni
-        if (_ovniSpawnTimer > 0) _ovniSpawnTimer -= Time.deltaTime;
-        else
-        {
-            int spawnPos = Random.Range(0, 2);
-            switch(spawnPos)
-            {
-                case 0:
-                    GameObject ovniA = Instantiate(_ovni, _ovniSpawnPointA.transform.position, Quaternion.identity);
-                    ovniA.GetComponent<Ovni>().TargetPos = new Vector2(_ovniSpawnPointB.position.x * 1.5f, _ovniSpawnPointB.position.y);
-                break; 
-                case 1:
-                    GameObject ovniB = Instantiate(_ovni, _ovniSpawnPointB.transform.position, Quaternion.identity);
-                    ovniB.GetComponent<Ovni>().TargetPos = new Vector2(_ovniSpawnPointA.position.x * 1.5f, _ovniSpawnPointA.position.y);
-                    break;
-            }
-            _ovniSpawnTimer = _maxOvniSpawnTimer;
-        }
-
         //Shoot Invader
         if(_timerInvaderShoot > 0)_timerInvaderShoot -= Time.deltaTime;
         else

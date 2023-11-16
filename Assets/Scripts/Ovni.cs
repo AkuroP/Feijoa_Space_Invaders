@@ -1,23 +1,57 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class Ovni : MonoBehaviour
 {
     [SerializeField]
     private float _speed;
-    private Vector2 _targetPos;
-    public Vector2 TargetPos { get => _targetPos; set => _targetPos = value; }
+    // private Vector2 _targetPos;
+    // public Vector2 TargetPos { get => _targetPos; set => _targetPos = value; }
+
+    [SerializeField] public Transform[] spawnPoints;
+    [SerializeField] public Transform target;
+    
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        this.transform.position = Vector2.MoveTowards(this.transform.position, _targetPos, _speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, target.position, _speed * Time.deltaTime);
+        
+        if (AreReallyNear(transform, target))
+        {
+            if (target == spawnPoints[0])
+            {
+                target = spawnPoints[1];
+            }
+            else
+            {
+                target = spawnPoints[0];
+            }
+        }
+    }
+
+    private bool AreReallyNear(Transform a, Transform b)
+    {
+        if (Math.Abs(a.position.x - b.position.x) < 0.1 && Math.Abs(a.position.y - b.position.y) < 0.1)
+        {
+            return true;
+        }
+        return false;
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (!other.CompareTag("Wall")) return;
-        Destroy(this.gameObject);
+        if (other.CompareTag("PlayerBullet"))
+        {
+            Fog fog = FindObjectOfType<Fog>();
+            if (fog)
+            {
+                Destroy(fog.gameObject);
+            }
+            Destroy(gameObject);
+        }
     }
 }
