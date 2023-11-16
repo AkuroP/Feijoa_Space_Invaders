@@ -119,6 +119,7 @@ public class Invaders_Manager : MonoBehaviour
         }
 
         //Shoot Invader
+        if (!_invadersWave[_currentWave]._hasWaveStarted) return;
         if(_timerInvaderShoot > 0)_timerInvaderShoot -= Time.deltaTime;
         else
         {

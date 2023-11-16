@@ -24,6 +24,22 @@ public class InvaderBullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.name == "BulletWall")
+        {
+            BulletWall bWall = other.GetComponent<BulletWall>();
+            bWall.HitWall();
+            if (bWall.WallHP <= 0)
+            {
+                bWall.Animator.SetBool("Destroy", true);
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                bWall.Animator.SetTrigger("Hit");
+                Destroy(this.gameObject);
+            }
+            return;
+        }
         if (other.CompareTag("Wall"))
         {
             Wall wall = other.GetComponent<Wall>();
@@ -37,23 +53,11 @@ public class InvaderBullet : MonoBehaviour
         }
 
 
-        if (other.name == "BulletWall")
-        {
-            BulletWall bWall = other.GetComponent<BulletWall>();
-            bWall.HitWall();
-            if (bWall.WallHP <= 0) DestroyObjectAndBullet(other);
-            else Destroy(this.gameObject);
-            return;
-        }
 
         if (!other.CompareTag("Player")) return;
         other.GetComponent<PlayerController>().TakeDamage();
-        DestroyObjectAndBullet(other);
-    }
-
-    private void DestroyObjectAndBullet(Collider2D other)
-    {
         other.gameObject.SetActive(false);
         Destroy(this.gameObject);
     }
+
 }
