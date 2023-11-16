@@ -45,3 +45,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _player: {fileID: 0}
+  fog: {fileID: 0}
+  ovni: {fileID: 0}
+  ovniSpawnPoints: []
+  _volumeProfile: {fileID: 11400000, guid: b6ca6889fd55805459d64d24afed9fcb, type: 2}
+  _vignetteSpeed: 2
+  _vignetteIntensity: 0.425
+  _startingColor: {r: 0, g: 0, b: 0, a: 1}

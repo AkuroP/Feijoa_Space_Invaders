@@ -4,6 +4,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+using UnityEditor.Rendering;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,6 +18,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Ovni ovni;
     [SerializeField] private Transform[] ovniSpawnPoints;
 
+    [SerializeField] private VolumeProfile _volumeProfile;
+    [SerializeField] private float _vignetteSpeed;
+    [SerializeField]
+    [Range(0f, 1f)]
+    private float _vignetteIntensity;
+    private Vignette _vignette;
+    private bool _vignetteEnabled = true;
+    private Color _vignetteOldColor;
+    [SerializeField]
+    private Color _startingColor;
+
     private void Awake()
     {
         if(instance != null)Destroy(instance.gameObject);
@@ -23,6 +37,9 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _volumeProfile.TryGet(out _vignette);
+        _vignette.color.value = _startingColor;
+        _vignette?.intensity.Override(0f);
         StartCoroutine(InitalCoroutine());
     }
 
@@ -36,6 +53,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        AnimVignette();
         PlayerRespawning();
     }
 
@@ -59,6 +77,7 @@ public class GameManager : MonoBehaviour
     void SpawnFog()
     {
         Instantiate(fog, transform);
+        SpawnVignette();
     }
 
     private void PlayerRespawning()
@@ -78,6 +97,7 @@ public class GameManager : MonoBehaviour
 
     public void OvniDeath()
     {
+        DeactivateVignette();
         StartCoroutine(OvniDeathCoroutine());
     }
     
@@ -87,5 +107,40 @@ public class GameManager : MonoBehaviour
         SpawnFog();
         yield return null;
     }
+
+    private void AnimVignette()
+    {
+        if (_vignetteEnabled) return;
+        if(_vignette?.intensity.value < _vignetteIntensity)
+        {
+            _vignette?.intensity.Override(Mathf.Clamp(_vignette.intensity.value + Time.deltaTime * _vignetteSpeed, 0f, _vignetteIntensity));
+        }
+        else _vignetteEnabled = true;
+    }
+
+    private void SpawnVignette()
+    {
+        _vignette.intensity.value = 0f;
+        _vignetteEnabled = false;
+        _vignetteOldColor = _vignette.color.value;
+        if(_player.PlayerHP == 1)TurnVignetteColorTo(Color.red, false);
+    }
+
+    public void TurnVignetteColorTo(Color color, bool animTurnVignette)
+    {
+        if (animTurnVignette) StartCoroutine(SmoothChangeColor(color, 1f));
+        else _vignette.color.value = color;   
+    }
+
+    private IEnumerator SmoothChangeColor(Color color, float speed)
+    {
+        while(_vignette.color.value != color)
+        {
+            _vignette.color.value = Color.Lerp(_vignette.color.value, color, Time.deltaTime * speed);
+            yield return null;
+        }
+    }
+
+    private void DeactivateVignette() => _vignette.intensity.value = 0f;
 
 }

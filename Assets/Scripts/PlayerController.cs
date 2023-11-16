@@ -30,6 +30,7 @@ public class PlayerController : MonoBehaviour
     public bool Respawning { get => _respawning; set => _respawning = value; }
     public float RespawnCD { get => _respawnCD; set => _respawnCD = value; }
     public float MaxRespawnCD { get => _maxRespawnCD;}
+    public float PlayerHP { get => _playerHP; }
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -82,6 +83,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerHP--;
         if (_playerHP <= 0) return;
+        if (_playerHP == 1) GameManager.instance.TurnVignetteColorTo(Color.red, true);
         _respawning = true;
         _respawnCD = _maxRespawnCD;
 
