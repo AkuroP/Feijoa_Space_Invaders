@@ -159,6 +159,7 @@ GameObject:
   - component: {fileID: 5933045401364982414}
   - component: {fileID: 5111350497722666900}
   - component: {fileID: 5652518053796640334}
+  - component: {fileID: 1903409742170926232}
   m_Layer: 0
   m_Name: Invaders
   m_TagString: Invaders
@@ -250,9 +251,11 @@ MonoBehaviour:
   _invaderManager: {fileID: 0}
   _invaderType: 0
   _maxTimerMoveInvader: 1
-  _fogSpawn: {fileID: 5971199394486862664, guid: ac8c85014fc62774798ef4c89d6fe77f, type: 3}
-  _maxTimeBeforeSpawn: 2
+  _timebeforeInvaderAppear: 0.07
+  _fogSpawn: {fileID: 7559075858351329695, guid: d05e30f12b5d2fb4ba473528d801711d, type: 3}
+  _maxTimeBeforeSpawn: 0.15
   _glowSR: {fileID: 0}
+  _fear: {fileID: 0}
 --- !u!61 &5933045401364982414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -346,6 +349,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1903409742170926232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6266753664305992390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df7ba38ee77176648b236b0ae4ce4714, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shakeSpeed: 75
+  _shakeAmount: 0.02
 --- !u!1 &6830656013080656474
 GameObject:
   m_ObjectHideFlags: 0

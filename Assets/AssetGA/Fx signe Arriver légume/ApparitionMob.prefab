@@ -28,7 +28,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7559075859870730862}
@@ -1046,21 +1046,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: -2.2297301
-          outSlope: -2.2297301
+          value: 0.5008259
+          inSlope: -1.7229575
+          outSlope: -1.7229575
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.13333334
+          outWeight: 0.051139522
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: 1
-          outSlope: 1
+          inSlope: -0.014649594
+          outSlope: -0.014649594
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.1172874
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
@@ -4856,7 +4856,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_RenderMode: 4
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4917,7 +4917,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.633589, y: 3.633589, z: 3.633589}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7559075858351329690}
@@ -5005,7 +5005,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.7
+      scalar: 0.8
       minScalar: 0.1
       maxCurve:
         serializedVersion: 2
@@ -5557,7 +5557,7 @@ ParticleSystem:
     angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
-    radiusThickness: 1
+    radiusThickness: 0.5
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: 0, y: 0, z: 0}
@@ -5640,7 +5640,7 @@ ParticleSystem:
     sphericalDirectionAmount: 0
     randomPositionAmount: 0
     radius:
-      value: 1
+      value: 0.5
       mode: 0
       spread: 0
       speed:
@@ -5934,21 +5934,21 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 1
-          inSlope: -2.2297301
-          outSlope: -2.2297301
+          value: 0.4367774
+          inSlope: -1.9626262
+          outSlope: -1.9626262
           tangentMode: 0
           weightedMode: 0
           inWeight: 0.33333334
-          outWeight: 0.13333334
+          outWeight: 0.0578099
         - serializedVersion: 3
           time: 1
           value: 0
-          inSlope: 1
-          outSlope: 1
+          inSlope: 0.3005452
+          outSlope: 0.3005452
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.14174539
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2

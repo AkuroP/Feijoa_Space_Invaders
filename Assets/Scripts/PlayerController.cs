@@ -12,7 +12,9 @@ public class PlayerController : MonoBehaviour
     private PlayerInput playerInput;
     private PlayerInputActions playerInputActions;
     [Space]
-    [SerializeField] private float _maxShootCD = 1f;
+    [SerializeField] private float _maxShootCD = 2f;
+    [SerializeField] private float _shootCDBoosted = 1f;
+    private float _maxShootCDStacked;
     private float _shootCD;
 
     [SerializeField]
@@ -31,6 +33,9 @@ public class PlayerController : MonoBehaviour
     public float RespawnCD { get => _respawnCD; set => _respawnCD = value; }
     public float MaxRespawnCD { get => _maxRespawnCD;}
     public float PlayerHP { get => _playerHP; }
+    public float ShootCDBoosted { get => _shootCDBoosted; }
+    public float MaxShootCD { get => _maxShootCD; set => _maxShootCD = value; }
+    public float ShootCDStacked { get => _maxShootCDStacked; }
     private void Awake()
     {
         playerInput = GetComponent<PlayerInput>();
@@ -39,6 +44,8 @@ public class PlayerController : MonoBehaviour
         playerInputActions.Player.Enable();
         playerInputActions.Player.Shoot.performed += Shoot;
         playerInputActions.Player.PlayerMovement.performed += Move;
+
+        _maxShootCDStacked = _maxShootCD;
     }
 
     void Update()

@@ -9,6 +9,7 @@ using UnityEngine.UI;
 
 public class Invaders_Manager : MonoBehaviour
 {
+    public static Invaders_Manager instance;
     [SerializeField] private bool _isGamePlaying = true;
     
     /*[SerializeField] private float _maxTimerMoveInvader_2 = 1.1f;
@@ -85,9 +86,14 @@ public class Invaders_Manager : MonoBehaviour
     public Vector2 RightVector { get => _rightVector; set => _rightVector = value; }
     public Vector2 DownRightVector { get => _downRightVector; set => _downRightVector = value; }
     public Vector2 DownLeftVector { get => _downLeftVector; set => _downLeftVector = value; }
-    
+
     //public Vector2 MoveVector { get => _moveVector; set => _moveVector = value; }
 
+    private void Awake()
+    {
+        if (instance != null) Destroy(instance.gameObject);
+        instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -131,5 +137,8 @@ public class Invaders_Manager : MonoBehaviour
 
     }
 
-   
+   public void FEARALL(bool addOrRemove)
+    {
+        foreach(Invaders invader in _invadersWave[_currentWave]._invader) invader.Fear.enabled = addOrRemove ? true : false;
+    }
 }
