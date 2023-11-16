@@ -7,6 +7,7 @@ TagManager:
   - Invaders
   - Wall
   - PlayerBullet
+  - Fog
   layers:
   - Default
   - TransparentFX

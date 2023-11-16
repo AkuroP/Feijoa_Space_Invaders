@@ -56,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: ffce05df11812a84faffd8b9b10d6576, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -173,6 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _speed: 25
+  miniFog: {fileID: 6820379934891460767, guid: 2d66c017bfbf87841a24a9bb1248298a, type: 3}
+  baseMat: {fileID: 2100000, guid: ffce05df11812a84faffd8b9b10d6576, type: 2}
+  emissiveMat: {fileID: 2100000, guid: 815d32a5d8cb6b846a96c51c909cb66a, type: 2}
 --- !u!96 &93568719226525048
 TrailRenderer:
   serializedVersion: 3

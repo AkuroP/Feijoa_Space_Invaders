@@ -46,10 +46,14 @@ public class Ovni : MonoBehaviour
     {
         if (other.CompareTag("PlayerBullet"))
         {
-            Fog fog = FindObjectOfType<Fog>();
-            if (fog)
+            Destroy(other.gameObject);
+            Fog[] fogs = FindObjectsOfType<Fog>();
+            if (fogs.Length > 0)
             {
-                Destroy(fog.gameObject);
+                foreach (Fog fog in fogs)
+                {
+                    Destroy(fog.gameObject);
+                }
             }
             Destroy(gameObject);
         }
