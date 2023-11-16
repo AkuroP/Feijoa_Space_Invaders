@@ -55,7 +55,8 @@ public class Bullet : MonoBehaviour
 
     private void DestroyObjectAndBullet(Collider2D other)
     {
-        other.gameObject.SetActive(false);
+
+        other.GetComponent<Invaders>().OnDeath();
         Destroy(this.gameObject);
     }
 }

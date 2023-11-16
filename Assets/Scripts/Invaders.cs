@@ -1,6 +1,8 @@
+using JetBrains.Annotations;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 
 public class Invaders : MonoBehaviour
 {
@@ -26,6 +28,7 @@ public class Invaders : MonoBehaviour
 
     [SerializeField] private GameObject _fogSpawn;
     [SerializeField] private float _maxTimeBeforeSpawn;
+    [SerializeField] private SpriteRenderer _glowSR;
 
 
     public float MaxTimerMoveInvader { get => _maxTimerMoveInvader; set => _maxTimerMoveInvader = value; }
@@ -110,6 +113,14 @@ public class Invaders : MonoBehaviour
         
         Destroy(fog);
     }
+
+    public void OnDeath()
+    {
+        SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
+        this.GetComponent<Animator>().SetBool("Disappear", true);
+    }
+
+    public void DisableSelf() => this.gameObject.SetActive(false);
 
 }
 
