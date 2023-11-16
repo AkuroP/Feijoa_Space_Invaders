@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7559075858351329689}
   - component: {fileID: 7559075858351329688}
   m_Layer: 0
-  m_Name: ChocEntreToupies
+  m_Name: ApparitionMob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
