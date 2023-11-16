@@ -23,12 +23,12 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(WaitCoroutine());
+        StartCoroutine(InitalCoroutine());
     }
 
-    IEnumerator WaitCoroutine()
+    IEnumerator InitalCoroutine()
     {
-        yield return new WaitForSeconds(Random.Range(5, 15));
+        yield return new WaitForSeconds(Random.Range(3, 7));
         
         SpawnFogAndOvni();
     }
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnFogAndOvni()
     {
-        Instantiate(fog, transform);
+        SpawnFog();
         int spawnPos = Random.Range(0, 2);
         Ovni ovniInstance = Instantiate(ovni, ovniSpawnPoints[spawnPos].transform.position, Quaternion.identity);
         ovniInstance.spawnPoints = ovniSpawnPoints;
@@ -56,6 +56,11 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    void SpawnFog()
+    {
+        Instantiate(fog, transform);
+    }
+
     private void PlayerRespawning()
     {
         if (_player.Respawning)
@@ -68,6 +73,19 @@ public class GameManager : MonoBehaviour
             }
 
         }
+    }
+
+
+    public void OvniDeath()
+    {
+        StartCoroutine(OvniDeathCoroutine());
+    }
+    
+    IEnumerator OvniDeathCoroutine()
+    {
+        yield return new WaitForSeconds(Random.Range(10, 15));
+        SpawnFog();
+        yield return null;
     }
 
 }

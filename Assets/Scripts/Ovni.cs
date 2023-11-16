@@ -58,4 +58,9 @@ public class Ovni : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    private void OnDestroy()
+    {
+        GameManager.instance.OvniDeath();
+    }
 }
