@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using UnityEditor.Animations;
+//using UnityEditor.Animations;
 using Game.Script.SoundManager;
 //using UnityEditorInternal;
 
