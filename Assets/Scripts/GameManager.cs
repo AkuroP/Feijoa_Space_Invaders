@@ -41,6 +41,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private AudioClip _music;
     public AudioMixerGroup _audioMixer;
 
+    public Sprite _normalBG;
+    public Sprite _nuitBG;
+    public Image _bg;
+
     [System.Serializable]
     public class InputJuiciness
     {
@@ -114,6 +118,7 @@ public class GameManager : MonoBehaviour
         Instantiate(fog, transform);
         SpawnVignette();
         _player.MaxShootCD = _player.ShootCDStacked;
+        _bg.sprite = _nuitBG;
     }
 
     private void PlayerRespawning()
@@ -134,6 +139,7 @@ public class GameManager : MonoBehaviour
     public void OvniDeath()
     {
         DeactivateVignette();
+        _bg.sprite = _normalBG;
         _player.MaxShootCD = _player.ShootCDBoosted;
         StartCoroutine(OvniDeathCoroutine());
     }

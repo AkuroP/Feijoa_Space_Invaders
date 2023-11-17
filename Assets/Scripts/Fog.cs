@@ -13,8 +13,8 @@ public class Fog : MonoBehaviour
     void Start()
     {
         if (!GameManager.instance._inputJuiciness._input2)ServiceLocator.Get()?.PlaySound(_fogAudio);
-        if (!GameManager.instance._inputJuiciness._input1)_fxFog?.gameObject.SetActive(false);
-        if (!GameManager.instance._inputJuiciness._input1)_fxGrain?.gameObject.SetActive(false);
+        if (GameManager.instance._inputJuiciness._input1)_fxFog?.gameObject.SetActive(false);
+        if (GameManager.instance._inputJuiciness._input1)_fxGrain?.gameObject.SetActive(false);
     }
 
     // Update is called once per frame

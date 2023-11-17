@@ -6682,6 +6682,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 480225423483260066, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
+      propertyPath: _bg
+      value: 
+      objectReference: {fileID: 1791810129}
+    - target: {fileID: 480225423483260066, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
       propertyPath: fog
       value: 
       objectReference: {fileID: 6820379934891460767, guid: 343dd91ffeccce14d9dc14769a2f045f, type: 3}
@@ -6690,9 +6694,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5199513312267318326, guid: 5beda02ef45d68e43b47b25f477e1686, type: 3}
     - target: {fileID: 480225423483260066, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
+      propertyPath: _nuitBG
+      value: 
+      objectReference: {fileID: 21300000, guid: ba4c90121e2b0a844999d4edce938d5c, type: 3}
+    - target: {fileID: 480225423483260066, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
       propertyPath: _player
       value: 
       objectReference: {fileID: 901858265}
+    - target: {fileID: 480225423483260066, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
+      propertyPath: _normalBG
+      value: 
+      objectReference: {fileID: 21300000, guid: fe41155bf13115e4eae06bf3dfe31048, type: 3}
     - target: {fileID: 480225423483260066, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
       propertyPath: _inputJuiciness._inputGO5
       value: 

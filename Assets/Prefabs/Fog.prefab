@@ -4900,6 +4900,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fogAudio: {fileID: 8300000, guid: a0d167283bc40fe4f944e3444118fc56, type: 3}
+  _fxFog: {fileID: 198967782588390442}
+  _fxGrain: {fileID: 2385124575921792251}
 --- !u!61 &7456000281230924927
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5018,6 +5020,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4746d6f2c1f2ad4aaa178047df08e55, type: 3}
+--- !u!1 &2385124575921792251 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7004722158435246078, guid: b4746d6f2c1f2ad4aaa178047df08e55, type: 3}
+  m_PrefabInstance: {fileID: 4624193628762831621}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4182958841427888644 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8800233222948253953, guid: b4746d6f2c1f2ad4aaa178047df08e55, type: 3}
