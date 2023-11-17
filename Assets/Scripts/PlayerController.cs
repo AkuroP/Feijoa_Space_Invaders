@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             if (_shootCD > 0f) return;
-            if (!GameManager.instance._inputJuiciness._input2) ServiceLocator.Get().PlaySound(_playerShootAudio);
+            if (!GameManager.instance._inputJuiciness._input2) ServiceLocator.Get().PlaySound(_playerShootAudio, GameManager.instance._audioMixer);
             Instantiate(bulletPrefab, transform.position, transform.rotation);
             _shootCD = _maxShootCD;
         }

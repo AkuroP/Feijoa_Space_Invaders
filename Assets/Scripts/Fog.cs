@@ -12,7 +12,7 @@ public class Fog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (!GameManager.instance._inputJuiciness._input2)ServiceLocator.Get()?.PlaySound(_fogAudio);
+        if (!GameManager.instance._inputJuiciness._input2)ServiceLocator.Get()?.PlaySound(_fogAudio, GameManager.instance._audioMixer);
         if (GameManager.instance._inputJuiciness._input1)_fxFog?.gameObject.SetActive(false);
         if (GameManager.instance._inputJuiciness._input1)_fxGrain?.gameObject.SetActive(false);
     }

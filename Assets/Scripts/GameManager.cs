@@ -40,6 +40,7 @@ public class GameManager : MonoBehaviour
     public Heartbeat _heartbeat;
     [SerializeField] private AudioClip _music;
     public AudioMixerGroup _audioMixer;
+    public AudioMixerGroup _musicMixer;
 
     public Sprite _normalBG;
     public Sprite _nuitBG;
@@ -75,8 +76,8 @@ public class GameManager : MonoBehaviour
         _vignette.color.value = _startingColor;
         _vignette?.intensity.Override(0f);
         _heartbeat = this.GetComponent<Heartbeat>();
+        ServiceLocator.Get().PlayMusic(_music, _musicMixer);
         StartCoroutine(InitalCoroutine());
-        ServiceLocator.Get().PlayMusic(_music, _audioMixer);
     }
 
     IEnumerator InitalCoroutine()
@@ -146,7 +147,7 @@ public class GameManager : MonoBehaviour
     
     IEnumerator OvniDeathCoroutine()
     {
-        yield return new WaitForSeconds(Random.Range(10, 15));
+        yield return new WaitForSeconds(Random.Range(5, 8));
         SpawnFog();
         yield return null;
     }

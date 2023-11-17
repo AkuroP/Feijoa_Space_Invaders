@@ -27,7 +27,7 @@ public class Invaders : MonoBehaviour
     [SerializeField] private float _timebeforeInvaderAppear;
 
     private Vector2 _moveVector;
-    private int _moveMuliplier = 1;
+    private float _moveDiviser = 1;
 
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
@@ -70,7 +70,7 @@ public class Invaders : MonoBehaviour
         if (!_invaderManager.IsGamePlaying) return;
         if (_timerMoveInvader <= 0)
         {
-            this.transform.position += (Vector3)_moveVector * _moveMuliplier;
+            this.transform.position += (Vector3)_moveVector / _moveDiviser;
             _timerMoveInvader = _maxTimerMoveInvader;
         }
         else _timerMoveInvader -= Time.deltaTime;
@@ -86,7 +86,7 @@ public class Invaders : MonoBehaviour
         {
             case 1:
                 _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader[0].MaxTimerMoveInvader = 0f;
-                _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader[0]._moveMuliplier = 2;
+                _invaderManager.InvadersWaves[_invaderManager.CurrentWave]._invader[0]._moveDiviser = 4f;
             break;
             case 0:
                 if (_invaderManager.CurrentWave >= _invaderManager.InvadersWaves.Count) break;
