@@ -20,7 +20,7 @@ public class Heartbeat : MonoBehaviour
     void Start()
     {
         _vignette = GameManager.instance.Vignette;
-        ServiceLocator.Get().PlaySound(_heartbeatAudio, GameManager.instance._audioMixer);
+        if (!GameManager.instance._inputJuiciness._input2) ServiceLocator.Get().PlaySound(_heartbeatAudio, GameManager.instance._audioMixer);
         minV = .2f;
         maxV = 1f;
     }
@@ -28,7 +28,9 @@ public class Heartbeat : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (!switchMinMax)
+
+        if (GameManager.instance._inputJuiciness._input4) return;
+            if (!switchMinMax)
         {
             if (_vignette.smoothness.value > minV) _vignette.smoothness.value = Mathf.Clamp(_vignette.smoothness.value - Time.deltaTime * speed, minV, maxV);
             else switchMinMax = true;

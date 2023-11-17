@@ -13,6 +13,7 @@ public class InvaderBullet : MonoBehaviour
     {
         _spriteRenderer = this.GetComponent<SpriteRenderer>();
         _trailRenderer = this.GetComponent<TrailRenderer>();
+        if(GameManager.instance._inputJuiciness._input3)_trailRenderer.gameObject.SetActive(false);
     }
 
     // Update is called once per frame
@@ -30,24 +31,27 @@ public class InvaderBullet : MonoBehaviour
             bWall.HitWall();
             if (bWall.WallHP <= 0)
             {
-                bWall.Animator.SetBool("Destroy", true);
+                if (!GameManager.instance._inputJuiciness._input4) bWall.Animator.SetBool("Destroy", true);
                 Destroy(this.gameObject);
             }
             else
             {
-                bWall.Animator.SetTrigger("Hit");
+                if (!GameManager.instance._inputJuiciness._input4) bWall.Animator.SetTrigger("Hit");
                 Destroy(this.gameObject);
             }
             return;
         }
         if (other.CompareTag("Wall"))
         {
-            Wall wall = other.GetComponent<Wall>();
-            if(wall.DeleteBullet) Destroy(this.gameObject);
-            if (wall.ChangeBulletColor)
+            if (!GameManager.instance._inputJuiciness._input3)
             {
-                _spriteRenderer.color = wall.NewColor;
-                _trailRenderer.startColor = wall.NewColor;
+                Wall wall = other.GetComponent<Wall>();
+                if(wall.DeleteBullet) Destroy(this.gameObject);
+                if (wall.ChangeBulletColor)
+                {
+                    _spriteRenderer.color = wall.NewColor;
+                    _trailRenderer.startColor = wall.NewColor;
+                }
             }
 
         }

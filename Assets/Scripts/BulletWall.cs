@@ -14,7 +14,7 @@ public class BulletWall : MonoBehaviour
     public void HitWall()
     {
         _wallHP--;
-       ServiceLocator.Get().PlaySound(_wallCrackAudio, GameManager.instance._audioMixer);
+       if(!GameManager.instance._inputJuiciness._input2) ServiceLocator.Get().PlaySound(_wallCrackAudio, GameManager.instance._audioMixer);
     }
     private Animator _animator => this.GetComponent<Animator>();
 

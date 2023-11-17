@@ -11,6 +11,11 @@ public class Bullet : MonoBehaviour
     [SerializeField] private Material emissiveMat;
     private float raycastDistance = 0.05f;
 
+    private void Start()
+    {
+        if (GameManager.instance._inputJuiciness._input3) this.GetComponentInChildren<TrailRenderer>().gameObject.SetActive(false);
+    }
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -21,7 +26,7 @@ public class Bullet : MonoBehaviour
             if (hit.collider.gameObject.CompareTag("Wall"))
             {
                 if (!hit.collider.gameObject.GetComponent<Wall>().DeleteBullet) return;
-                Instantiate(miniFog, hit.point, Quaternion.Euler(0, 0, 0));
+                if(!GameManager.instance._inputJuiciness._input1) Instantiate(miniFog, hit.point, Quaternion.Euler(0, 0, 0));
             }
         }
     }
@@ -40,14 +45,14 @@ public class Bullet : MonoBehaviour
 
         if (other.CompareTag("Fog"))
         {
-            GetComponent<SpriteRenderer>().material = emissiveMat;
+           if(!GameManager.instance._inputJuiciness._input1)GetComponent<SpriteRenderer>().material = emissiveMat;
         }
     }
     private void OnTriggerExit2D(Collider2D other)
     {
         if (other.CompareTag("Fog"))
         {
-            GetComponent<SpriteRenderer>().material = baseMat;
+            if (!GameManager.instance._inputJuiciness._input1) GetComponent<SpriteRenderer>().material = baseMat;
         }
     }
 

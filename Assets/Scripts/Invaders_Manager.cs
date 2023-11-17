@@ -135,6 +135,8 @@ public class Invaders_Manager : MonoBehaviour
 
    public void FEARALL(bool addOrRemove)
     {
+        if (GameManager.instance._inputJuiciness._input1) return;
+
         foreach (Invaders invader in _invadersWave[_currentWave]._invader)
         {
             invader.Fear.enabled = addOrRemove ? true : false;

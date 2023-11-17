@@ -38,7 +38,7 @@ namespace Game.Script.SoundManager
         {
             var audioSource = gameObject?.GetComponent<AudioSource>();
             if (audioSource.clip == null) return;
-            audioSource.Pause();
+            audioSource.Stop();
         }
     }
 }

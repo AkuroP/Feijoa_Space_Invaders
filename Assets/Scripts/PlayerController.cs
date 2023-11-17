@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             if (_shootCD > 0f) return;
-            ServiceLocator.Get().PlaySound(_playerShootAudio);
+            if (!GameManager.instance._inputJuiciness._input2) ServiceLocator.Get().PlaySound(_playerShootAudio);
             Instantiate(bulletPrefab, transform.position, transform.rotation);
             _shootCD = _maxShootCD;
         }
@@ -91,13 +91,16 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
-        ServiceLocator.Get().PlaySound(_playerHitAudio, GameManager.instance._audioMixer);
+        if (!GameManager.instance._inputJuiciness._input2)ServiceLocator.Get().PlaySound(_playerHitAudio, GameManager.instance._audioMixer);
         _playerHP--;
         if (_playerHP <= 0) return;
         if (_playerHP == 1)
         {
-            GameManager.instance.TurnVignetteColorTo(Color.red, true);
-            GameManager.instance._heartbeat.enabled = true;
+            if (!GameManager.instance._inputJuiciness._input4)
+            {
+                GameManager.instance.TurnVignetteColorTo(Color.red, true);
+                GameManager.instance._heartbeat.enabled = true;
+            }
         }
 
         _respawning = true;

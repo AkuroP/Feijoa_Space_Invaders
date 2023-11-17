@@ -9,6 +9,10 @@ using UnityEngine.Rendering.Universal;
 using UnityEditor.Rendering;
 using Game.Script.SoundManager;
 using UnityEngine.Audio;
+using UnityEngine.InputSystem;
+//using UnityEngine.UIElements;
+using static GameManager;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -36,6 +40,25 @@ public class GameManager : MonoBehaviour
     public Heartbeat _heartbeat;
     [SerializeField] private AudioClip _music;
     public AudioMixerGroup _audioMixer;
+
+    [System.Serializable]
+    public class InputJuiciness
+    {
+        public bool _input1;
+        public Image _inputImage1;
+        public bool _input2;
+        public Image _inputImage2;
+        public bool _input3;
+        public Image _inputImage3;
+        public bool _input4;
+        public Image _inputImage4;
+        public bool _input5;
+        public Image _inputImage5;
+        public GameObject _inputGO5;
+    }
+
+    public InputJuiciness _inputJuiciness;
+
     private void Awake()
     {
         if(instance != null)Destroy(instance.gameObject);
@@ -68,6 +91,7 @@ public class GameManager : MonoBehaviour
 
     void SpawnFogAndOvni()
     {
+        if (GameManager.instance._inputJuiciness._input2) return;
         SpawnFog();
         int spawnPos = Random.Range(0, 2);
         Ovni ovniInstance = Instantiate(ovni, ovniSpawnPoints[spawnPos].transform.position, Quaternion.identity);
@@ -85,7 +109,8 @@ public class GameManager : MonoBehaviour
 
     void SpawnFog()
     {
-        Invaders_Manager.instance.FEARALL(false);
+        if (GameManager.instance._inputJuiciness._input2) return;
+            Invaders_Manager.instance.FEARALL(false);
         Instantiate(fog, transform);
         SpawnVignette();
         _player.MaxShootCD = _player.ShootCDStacked;
@@ -135,11 +160,17 @@ public class GameManager : MonoBehaviour
         _vignette.intensity.value = 0f;
         _vignetteEnabled = false;
         _vignetteOldColor = _vignette.color.value;
+        if (!GameManager.instance._inputJuiciness._input4)
+        {
+        
         if (_player.PlayerHP == 1)
         {
             _heartbeat.enabled = true;
             TurnVignetteColorTo(Color.red, false);
         }
+         }
+
+
     }
 
     public void TurnVignetteColorTo(Color color, bool animTurnVignette)
@@ -159,5 +190,96 @@ public class GameManager : MonoBehaviour
     }
 
     private void DeactivateVignette() => _vignette.intensity.value = 0f;
+
+    public void OnInput1(InputAction.CallbackContext callback)
+    {
+        if(callback.performed)
+        {
+            if(_inputJuiciness._input1)
+            {
+                _inputJuiciness._input1 = false;
+                _inputJuiciness._inputImage1.color = Color.white;
+            }
+            else
+            {
+                _inputJuiciness._input1 = true;
+                _inputJuiciness._inputImage1.color = Color.green;
+            }
+        }
+            
+    }
+    public void OnInput2(InputAction.CallbackContext callback)
+    {
+        if (callback.performed)
+        {
+            if (_inputJuiciness._input2)
+            {
+                _inputJuiciness._input2 = false;
+                _inputJuiciness._inputImage2.color = Color.white;
+            }
+            else
+            {
+                _inputJuiciness._input2 = true;
+                _inputJuiciness._inputImage2.color = Color.green;
+                ServiceLocator.Get()?.StopMusic();
+            }
+        }
+
+    }
+    
+     public void OnInput3(InputAction.CallbackContext callback)
+    {
+        if (callback.performed)
+        {
+            if (_inputJuiciness._input3)
+            {
+                _inputJuiciness._input3 = false;
+                _inputJuiciness._inputImage3.color = Color.white;
+            }
+            else
+            {
+                _inputJuiciness._input3 = true;
+                _inputJuiciness._inputImage3.color = Color.green;
+            }
+        }
+
+    }
+    public void OnInput4(InputAction.CallbackContext callback)
+    {
+        if (callback.performed)
+        {
+            if (_inputJuiciness._input4)
+            {
+                _inputJuiciness._input4 = false;
+                _inputJuiciness._inputImage4.color = Color.white;
+            }
+            else
+            {
+                _inputJuiciness._input4 = true;
+                _inputJuiciness._inputImage4.color = Color.green;
+            }
+        }
+
+    }
+
+    public void OnInput5(InputAction.CallbackContext callback)
+    {
+        if (callback.performed)
+        {
+            if (_inputJuiciness._input5)
+            {
+                _inputJuiciness._input5 = false;
+                _inputJuiciness._inputImage5.color = Color.white;
+                _inputJuiciness._inputGO5.SetActive(false);
+            }
+            else
+            {
+                _inputJuiciness._input5 = true;
+                _inputJuiciness._inputImage5.color = Color.green;
+                _inputJuiciness._inputGO5.SetActive(true);
+            }
+        }
+
+    }
 
 }

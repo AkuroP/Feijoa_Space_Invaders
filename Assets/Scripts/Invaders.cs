@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 //using UnityEditor.Animations;
 using Game.Script.SoundManager;
+using static GameManager;
 //using UnityEditorInternal;
 
 public class Invaders : MonoBehaviour
@@ -120,14 +121,15 @@ public class Invaders : MonoBehaviour
         float randomTime = Random.Range(0f, _maxTimeBeforeSpawn);
         _timerMoveInvader += randomTime;
         yield return new WaitForSeconds(randomTime);
-        GameObject fog = Instantiate(_fogSpawn, this.transform.position, Quaternion.identity);
+        GameObject fog = null;
+        if (!GameManager.instance._inputJuiciness._input1) fog = Instantiate(_fogSpawn, this.transform.position, Quaternion.identity);
         //wait for fog to appear a bit
         yield return new WaitForSeconds(_timebeforeInvaderAppear);
         ServiceLocator.Get().PlaySound(_invaderAppearAudio, GameManager.instance._audioMixer);
         _spriteRenderer.enabled = true;
         _boxCollider2D.enabled = true;
         
-        Destroy(fog);
+        if(!GameManager.instance._inputJuiciness._input1) Destroy(fog);
     }
 
     public void OnDeath()
@@ -135,8 +137,9 @@ public class Invaders : MonoBehaviour
         _glowSR.enabled = true;
         _glowSR.sortingOrder = 10;
         _spriteRenderer.sortingOrder = 11;
-        ServiceLocator.Get().PlaySound(_invaderDeathAudio, GameManager.instance._audioMixer);
-        StartCoroutine(Disappear());
+        if(!GameManager.instance._inputJuiciness._input2) ServiceLocator.Get().PlaySound(_invaderDeathAudio, GameManager.instance._audioMixer);
+        if(!GameManager.instance._inputJuiciness._input1) StartCoroutine(Disappear());
+        else this.gameObject.SetActive(false);
     }
 
     public void DisableSelf() => this.gameObject.SetActive(false);
