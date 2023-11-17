@@ -62,5 +62,6 @@ public class Ovni : MonoBehaviour
     private void OnDestroy()
     {
         GameManager.instance.OvniDeath();
+        Invaders_Manager.instance.FEARALL(true);
     }
 }

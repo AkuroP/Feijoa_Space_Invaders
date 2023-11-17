@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
+using UnityEditor.Animations;
+//using UnityEditorInternal;
 
 public class Invaders : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class Invaders : MonoBehaviour
 
     private Vector2 _moveVector;
     private int _moveMuliplier = 1;
+
     private SpriteRenderer _spriteRenderer;
     private BoxCollider2D _boxCollider2D;
 
@@ -31,9 +34,15 @@ public class Invaders : MonoBehaviour
     [SerializeField] private float _maxTimeBeforeSpawn;
     [SerializeField] private SpriteRenderer _glowSR;
     [SerializeField] private ObjectShake _fear;
+    public float _disappearSpeed = 1f;
+
+    public Sprite _normalSprite;
+    public Sprite _angrySprite;
+
     public ObjectShake Fear { get => _fear;}
 
     public float MaxTimerMoveInvader { get => _maxTimerMoveInvader; set => _maxTimerMoveInvader = value; }
+    public SpriteRenderer SpriteRenderer { get => _spriteRenderer; set => _spriteRenderer = value; }
 
 
     // Start is called before the first frame update
@@ -118,11 +127,24 @@ public class Invaders : MonoBehaviour
 
     public void OnDeath()
     {
-        SpriteRenderer sr = this.GetComponent<SpriteRenderer>();
-        this.GetComponent<Animator>().SetBool("Disappear", true);
+        _glowSR.enabled = true;
+        _glowSR.sortingOrder = 10;
+        _spriteRenderer.sortingOrder = 11;
+        StartCoroutine(Disappear());
     }
 
     public void DisableSelf() => this.gameObject.SetActive(false);
+
+    private IEnumerator Disappear()
+    {
+        while(_spriteRenderer.color.a > 0)
+        {
+            _spriteRenderer.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, Mathf.Clamp(_spriteRenderer.color.a - Time.deltaTime * _disappearSpeed, 0f, 255f));
+            _glowSR.color = new Color(_spriteRenderer.color.r, _spriteRenderer.color.g, _spriteRenderer.color.b, Mathf.Clamp(_spriteRenderer.color.a - Time.deltaTime * _disappearSpeed, 0f, 255f));
+            yield return null;
+        }
+        if (_spriteRenderer.color.a <= 0f) this.gameObject.SetActive(false);
+    }
 
 }
 

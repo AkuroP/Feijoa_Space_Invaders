@@ -76,9 +76,9 @@ public class GameManager : MonoBehaviour
 
     void SpawnFog()
     {
+        Invaders_Manager.instance.FEARALL(false);
         Instantiate(fog, transform);
         SpawnVignette();
-        Invaders_Manager.instance.FEARALL(false);
         _player.MaxShootCD = _player.ShootCDStacked;
     }
 
@@ -101,7 +101,6 @@ public class GameManager : MonoBehaviour
     {
         DeactivateVignette();
         _player.MaxShootCD = _player.ShootCDBoosted;
-        Invaders_Manager.instance.FEARALL(true);
         StartCoroutine(OvniDeathCoroutine());
     }
     

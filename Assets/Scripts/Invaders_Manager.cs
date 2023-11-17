@@ -1,11 +1,14 @@
 using JetBrains.Annotations;
+//using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Data.Common;
 using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Tree;
 using UnityEngine;
 using UnityEngine.UI;
+
 
 public class Invaders_Manager : MonoBehaviour
 {
@@ -53,10 +56,6 @@ public class Invaders_Manager : MonoBehaviour
     private float _ovniSpawnTimer;
 
 
-
-    /*public float MaxTimerMoveInvader_2 { get => _maxTimerMoveInvader_2; set => _maxTimerMoveInvader_2 = value; }
-    public float MaxTimerMoveInvader_3 { get => _maxTimerMoveInvader_3; set => _maxTimerMoveInvader_3 = value; }*/
-    //public List<Invaders> Invader {  get => _invader; }
     [System.Serializable]
     public class InvadersWave
     {
@@ -80,14 +79,11 @@ public class Invaders_Manager : MonoBehaviour
     public List<InvadersWave> InvadersWaves { get => _invadersWave; set => _invadersWave = value; }
 
     public int CurrentWave { get => _currentWave ; set => _currentWave = value; }
-    /*public List<Transform> Invader_2 {  get => _invader_2; set => _invader_2 = value; }
-    public List<Transform> Invader_3 {  get => _invader_3; set => _invader_3 = value; }*/
     public Vector2 LeftVector { get => _leftVector; set => _leftVector = value; }
     public Vector2 RightVector { get => _rightVector; set => _rightVector = value; }
     public Vector2 DownRightVector { get => _downRightVector; set => _downRightVector = value; }
     public Vector2 DownLeftVector { get => _downLeftVector; set => _downLeftVector = value; }
 
-    //public Vector2 MoveVector { get => _moveVector; set => _moveVector = value; }
 
     private void Awake()
     {
@@ -139,6 +135,12 @@ public class Invaders_Manager : MonoBehaviour
 
    public void FEARALL(bool addOrRemove)
     {
-        foreach(Invaders invader in _invadersWave[_currentWave]._invader) invader.Fear.enabled = addOrRemove ? true : false;
+        foreach (Invaders invader in _invadersWave[_currentWave]._invader)
+        {
+            invader.Fear.enabled = addOrRemove ? true : false;
+            invader.SpriteRenderer.sprite = addOrRemove ? invader._normalSprite: invader._angrySprite;
+            invader._disappearSpeed = addOrRemove ? 1f : 2f;
+
+        }
     }
 }

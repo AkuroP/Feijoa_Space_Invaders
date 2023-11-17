@@ -158,7 +158,6 @@ GameObject:
   - component: {fileID: 4336051069539057348}
   - component: {fileID: 5933045401364982414}
   - component: {fileID: 5111350497722666900}
-  - component: {fileID: 5652518053796640334}
   - component: {fileID: 1903409742170926232}
   m_Layer: 0
   m_Name: Invaders
@@ -254,8 +253,11 @@ MonoBehaviour:
   _timebeforeInvaderAppear: 0.07
   _fogSpawn: {fileID: 7559075858351329695, guid: d05e30f12b5d2fb4ba473528d801711d, type: 3}
   _maxTimeBeforeSpawn: 0.15
-  _glowSR: {fileID: 0}
-  _fear: {fileID: 0}
+  _glowSR: {fileID: 3150794714829217678}
+  _fear: {fileID: 1903409742170926232}
+  _disappearSpeed: 1
+  _normalSprite: {fileID: 21300000, guid: bfe4e02a446994c498b33984ada4e908, type: 3}
+  _angrySprite: {fileID: 21300000, guid: b94b7d7eef1f3db488df7cbe7d8d43f7, type: 3}
 --- !u!61 &5933045401364982414
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -328,27 +330,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &5652518053796640334
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6266753664305992390}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 483f82933d9736b40810b390cfcfc395, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!114 &1903409742170926232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -356,7 +337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6266753664305992390}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df7ba38ee77176648b236b0ae4ce4714, type: 3}
   m_Name: 
@@ -379,7 +360,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7106367172148181082
 Transform:
   m_ObjectHideFlags: 0
@@ -402,7 +383,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6830656013080656474}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
