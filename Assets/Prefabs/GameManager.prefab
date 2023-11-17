@@ -54,8 +54,23 @@ MonoBehaviour:
   _vignetteIntensity: 0.425
   _startingColor: {r: 0, g: 0, b: 0, a: 1}
   _heartbeat: {fileID: 2706745114114085528}
-  _music: {fileID: 8300000, guid: 50a5f179825596e4b816e7a43152ff4b, type: 3}
+  _music: {fileID: 8300000, guid: 5e45b6535fe02b64babd4621316bdcd6, type: 3}
   _audioMixer: {fileID: 24300002, guid: 7881c54ea6ac6404c832df42921c8432, type: 2}
+  _normalBG: {fileID: 0}
+  _nuitBG: {fileID: 0}
+  _bg: {fileID: 0}
+  _inputJuiciness:
+    _input1: 0
+    _inputImage1: {fileID: 0}
+    _input2: 0
+    _inputImage2: {fileID: 0}
+    _input3: 0
+    _inputImage3: {fileID: 0}
+    _input4: 0
+    _inputImage4: {fileID: 0}
+    _input5: 0
+    _inputImage5: {fileID: 0}
+    _inputGO5: {fileID: 0}
 --- !u!114 &2706745114114085528
 MonoBehaviour:
   m_ObjectHideFlags: 0
