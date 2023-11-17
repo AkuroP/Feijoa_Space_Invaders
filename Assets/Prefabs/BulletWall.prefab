@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wallHP: 2
+  _wallCrackAudio: {fileID: 8300000, guid: c086d9cbc01eb83458a4259b6df197d0, type: 3}
 --- !u!61 &4162423688283273254
 BoxCollider2D:
   m_ObjectHideFlags: 0

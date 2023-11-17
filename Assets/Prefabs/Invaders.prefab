@@ -258,6 +258,8 @@ MonoBehaviour:
   _disappearSpeed: 1
   _normalSprite: {fileID: 21300000, guid: bfe4e02a446994c498b33984ada4e908, type: 3}
   _angrySprite: {fileID: 21300000, guid: b94b7d7eef1f3db488df7cbe7d8d43f7, type: 3}
+  _invaderDeathAudio: {fileID: 8300000, guid: 3e27541e8ca127b41a8d92764c9685da, type: 3}
+  _invaderAppearAudio: {fileID: 8300000, guid: a0c5030609915cc448c10806adaf9532, type: 3}
 --- !u!61 &5933045401364982414
 BoxCollider2D:
   m_ObjectHideFlags: 0

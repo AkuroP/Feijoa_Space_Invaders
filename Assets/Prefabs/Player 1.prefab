@@ -168,6 +168,8 @@ MonoBehaviour:
   _shootCDBoosted: 1
   _invadersManager: {fileID: 0}
   _playerHP: 3
+  _playerShootAudio: {fileID: 8300000, guid: 7b31f2c7fd6f5f84796bd588df124692, type: 3}
+  _playerHitAudio: {fileID: 8300000, guid: 2bfe8180e115f2b4a96a732cf96b6381, type: 3}
 --- !u!61 &7257534742705116847
 BoxCollider2D:
   m_ObjectHideFlags: 0

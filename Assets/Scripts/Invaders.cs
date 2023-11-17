@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEditor.Animations;
+using Game.Script.SoundManager;
 //using UnityEditorInternal;
 
 public class Invaders : MonoBehaviour
@@ -38,6 +39,9 @@ public class Invaders : MonoBehaviour
 
     public Sprite _normalSprite;
     public Sprite _angrySprite;
+
+    [SerializeField] private AudioClip _invaderDeathAudio;
+    [SerializeField] private AudioClip _invaderAppearAudio;
 
     public ObjectShake Fear { get => _fear;}
 
@@ -119,6 +123,7 @@ public class Invaders : MonoBehaviour
         GameObject fog = Instantiate(_fogSpawn, this.transform.position, Quaternion.identity);
         //wait for fog to appear a bit
         yield return new WaitForSeconds(_timebeforeInvaderAppear);
+        ServiceLocator.Get().PlaySound(_invaderAppearAudio, GameManager.instance._audioMixer);
         _spriteRenderer.enabled = true;
         _boxCollider2D.enabled = true;
         
@@ -130,6 +135,7 @@ public class Invaders : MonoBehaviour
         _glowSR.enabled = true;
         _glowSR.sortingOrder = 10;
         _spriteRenderer.sortingOrder = 11;
+        ServiceLocator.Get().PlaySound(_invaderDeathAudio, GameManager.instance._audioMixer);
         StartCoroutine(Disappear());
     }
 

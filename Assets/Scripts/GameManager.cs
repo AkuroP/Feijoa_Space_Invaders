@@ -7,6 +7,8 @@ using Random = UnityEngine.Random;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using UnityEditor.Rendering;
+using Game.Script.SoundManager;
+using UnityEngine.Audio;
 
 public class GameManager : MonoBehaviour
 {
@@ -32,6 +34,8 @@ public class GameManager : MonoBehaviour
     public Vignette Vignette { get => _vignette; }
 
     public Heartbeat _heartbeat;
+    [SerializeField] private AudioClip _music;
+    public AudioMixerGroup _audioMixer;
     private void Awake()
     {
         if(instance != null)Destroy(instance.gameObject);
@@ -45,6 +49,7 @@ public class GameManager : MonoBehaviour
         _vignette?.intensity.Override(0f);
         _heartbeat = this.GetComponent<Heartbeat>();
         StartCoroutine(InitalCoroutine());
+        ServiceLocator.Get().PlayMusic(_music, _audioMixer);
     }
 
     IEnumerator InitalCoroutine()

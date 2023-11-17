@@ -1,3 +1,4 @@
+using Game.Script.SoundManager;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -26,7 +27,8 @@ public class PlayerController : MonoBehaviour
     private float _maxRespawnCD = 3f;
     private float _respawnCD;
     private bool _respawning;
-
+    public AudioClip _playerShootAudio;
+    public AudioClip _playerHitAudio;
 
     //Get Set
     public bool Respawning { get => _respawning; set => _respawning = value; }
@@ -72,6 +74,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             if (_shootCD > 0f) return;
+            ServiceLocator.Get().PlaySound(_playerShootAudio);
             Instantiate(bulletPrefab, transform.position, transform.rotation);
             _shootCD = _maxShootCD;
         }
@@ -88,6 +91,7 @@ public class PlayerController : MonoBehaviour
 
     public void TakeDamage()
     {
+        ServiceLocator.Get().PlaySound(_playerHitAudio, GameManager.instance._audioMixer);
         _playerHP--;
         if (_playerHP <= 0) return;
         if (_playerHP == 1)

@@ -1,6 +1,8 @@
+using Game.Script.SoundManager;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.Rendering.Universal;
 
 public class Heartbeat : MonoBehaviour
@@ -12,10 +14,13 @@ public class Heartbeat : MonoBehaviour
     private float speed = 1f;
 
     private bool switchMinMax;
+    [SerializeField]
+    private AudioClip _heartbeatAudio;
     // Start is called before the first frame update
     void Start()
     {
         _vignette = GameManager.instance.Vignette;
+        ServiceLocator.Get().PlaySound(_heartbeatAudio, GameManager.instance._audioMixer);
         minV = .2f;
         maxV = 1f;
     }
