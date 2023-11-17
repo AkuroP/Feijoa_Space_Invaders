@@ -237,18 +237,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.73
       objectReference: {fileID: 0}
@@ -302,20 +290,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -337,51 +321,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1780649426099bc4b9b084f80d3af1c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &138116680
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 138116681}
-  - component: {fileID: 138116682}
-  m_Layer: 5
-  m_Name: Image
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &138116681
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138116680}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 567025834944687229}
-  m_Father: {fileID: 342142853}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &138116682
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138116680}
-  m_CullTransparentMesh: 1
 --- !u!1001 &155399974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -390,18 +329,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
@@ -456,20 +383,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -849,18 +772,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -914,20 +825,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1044,7 +951,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1791810128}
-  - {fileID: 138116681}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1060,18 +966,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.98
@@ -1122,20 +1016,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1528,18 +1418,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.08
       objectReference: {fileID: 0}
@@ -1593,20 +1471,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1636,18 +1510,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.57
@@ -1698,20 +1560,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1965,18 +1823,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2030,20 +1876,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2110,18 +1952,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -2175,20 +2005,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2218,18 +2044,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.25
@@ -2284,20 +2098,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2495,18 +2305,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9
       objectReference: {fileID: 0}
@@ -2560,20 +2358,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2733,18 +2527,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.27
       objectReference: {fileID: 0}
@@ -2794,20 +2576,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2910,10 +2688,6 @@ PrefabInstance:
       value: Invaders (9)
       objectReference: {fileID: 0}
     - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: bfe4e02a446994c498b33984ada4e908, type: 3}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
@@ -2946,18 +2720,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
@@ -3012,20 +2774,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3138,18 +2896,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.62
       objectReference: {fileID: 0}
@@ -3203,20 +2949,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3352,18 +3094,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.25
       objectReference: {fileID: 0}
@@ -3417,20 +3147,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (2)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3538,18 +3264,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.27
       objectReference: {fileID: 0}
@@ -3599,20 +3313,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3642,18 +3352,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.9
@@ -3708,20 +3406,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (3)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3829,18 +3523,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.08
       objectReference: {fileID: 0}
@@ -3894,20 +3576,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (5)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -3937,18 +3615,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.57
@@ -3999,20 +3665,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4245,18 +3907,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.73
       objectReference: {fileID: 0}
@@ -4310,20 +3960,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4432,18 +4078,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1959160219}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.07
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -4537,18 +4171,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.5
       objectReference: {fileID: 0}
@@ -4602,20 +4224,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4826,119 +4444,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791810127}
   m_CullTransparentMesh: 1
---- !u!1001 &1792762368
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1183218821815217305, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_Name
-      value: Player (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 1183218821815217305, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1671168845970312898, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4827197299582039164, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 7205c6ad91308324885fcce3597863a7, type: 3}
-    - target: {fileID: 7257534742705116847, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_Size.x
-      value: 8.529611
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257534742705116847, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_Size.y
-      value: 11.220188
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257534742705116847, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.23926973
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257534742705116847, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.32471657
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257534742705116847, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 20.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 7257534742705116847, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 20.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266164639166856911, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: limits
-      value: 2.9
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266164639166856911, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: playerSpeed
-      value: 0.02
-      objectReference: {fileID: 0}
-    - target: {fileID: 7266164639166856911, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
-      propertyPath: _invadersManager
-      value: 
-      objectReference: {fileID: 1931596472}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: bc571a15a52f47f4da02c8c860a41fdb, type: 3}
 --- !u!1001 &1798622182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5448,18 +4953,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6
       objectReference: {fileID: 0}
@@ -5499,10 +4992,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: _invaderType
       value: 2
@@ -5513,20 +5002,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5556,18 +5041,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -5622,20 +5095,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5823,18 +5292,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 72682955}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.6
       objectReference: {fileID: 0}
@@ -5874,10 +5331,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4336051069539057348, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: _invaderType
       value: 1
@@ -5888,20 +5341,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.375
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: faa33742ca0e31347b439b55fb7cecfd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5975,18 +5424,6 @@ PrefabInstance:
     m_TransformParent: {fileID: 1397063885}
     m_Modifications:
     - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2305932020271446738, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.98
       objectReference: {fileID: 0}
@@ -6036,20 +5473,16 @@ PrefabInstance:
       objectReference: {fileID: 1931596472}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 1.5
+      value: 14.12
       objectReference: {fileID: 0}
     - target: {fileID: 5933045401364982414, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 1
+      value: 14.11
       objectReference: {fileID: 0}
     - target: {fileID: 6266753664305992390, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
       propertyPath: m_Name
       value: Invaders
       objectReference: {fileID: 0}
-    - target: {fileID: 7619726011043273660, guid: e4c406cbe44130347bb91782ab3b72df, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: c8e61345d3987184b973a87b6d24e87a, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -6189,43 +5622,6 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!224 &567025834944687229
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074763268699980418}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 300, z: 100}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 138116681}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &2074763268699980418
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 567025834944687229}
-  - component: {fileID: 2937033302120103795}
-  - component: {fileID: 3235113270495849541}
-  m_Layer: 0
-  m_Name: Old FIlm Grain _ Overlay (Download)000
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1001 &2853699450085252928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6307,79 +5703,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 688c50b201cca7144be6e6273fa58827, type: 3}
---- !u!212 &2937033302120103795
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074763268699980418}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 100
-  m_Sprite: {fileID: 21300000, guid: 76b3ca6f2abfc5443a75069e4d983aaa, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.36078432}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 12.8, y: 7.2}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!95 &3235113270495849541
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2074763268699980418}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f5b1ce1475077214c9eefaed5ac02100, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &5499794268160813448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6447,7 +5770,6 @@ SceneRoots:
   - {fileID: 1297458899}
   - {fileID: 1416608908}
   - {fileID: 901858264}
-  - {fileID: 1792762368}
   - {fileID: 2853699450085252928}
   - {fileID: 659215179}
   - {fileID: 329418026}
