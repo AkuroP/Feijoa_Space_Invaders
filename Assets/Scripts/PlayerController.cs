@@ -90,7 +90,12 @@ public class PlayerController : MonoBehaviour
     {
         _playerHP--;
         if (_playerHP <= 0) return;
-        if (_playerHP == 1) GameManager.instance.TurnVignetteColorTo(Color.red, true);
+        if (_playerHP == 1)
+        {
+            GameManager.instance.TurnVignetteColorTo(Color.red, true);
+            GameManager.instance._heartbeat.enabled = true;
+        }
+
         _respawning = true;
         _respawnCD = _maxRespawnCD;
 

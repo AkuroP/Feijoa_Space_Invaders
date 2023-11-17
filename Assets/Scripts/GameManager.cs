@@ -29,6 +29,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Color _startingColor;
 
+    public Vignette Vignette { get => _vignette; }
+
+    public Heartbeat _heartbeat;
     private void Awake()
     {
         if(instance != null)Destroy(instance.gameObject);
@@ -40,6 +43,7 @@ public class GameManager : MonoBehaviour
         _volumeProfile.TryGet(out _vignette);
         _vignette.color.value = _startingColor;
         _vignette?.intensity.Override(0f);
+        _heartbeat = this.GetComponent<Heartbeat>();
         StartCoroutine(InitalCoroutine());
     }
 
@@ -126,13 +130,18 @@ public class GameManager : MonoBehaviour
         _vignette.intensity.value = 0f;
         _vignetteEnabled = false;
         _vignetteOldColor = _vignette.color.value;
-        if(_player.PlayerHP == 1)TurnVignetteColorTo(Color.red, false);
+        if (_player.PlayerHP == 1)
+        {
+            _heartbeat.enabled = true;
+            TurnVignetteColorTo(Color.red, false);
+        }
     }
 
     public void TurnVignetteColorTo(Color color, bool animTurnVignette)
     {
         if (animTurnVignette) StartCoroutine(SmoothChangeColor(color, 1f));
-        else _vignette.color.value = color;   
+        else _vignette.color.value = color;
+
     }
 
     private IEnumerator SmoothChangeColor(Color color, float speed)
